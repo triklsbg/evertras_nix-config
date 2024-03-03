@@ -1,3 +1,7 @@
+#
+# Make manual: When a line starts with ‘@’, the echoing of that line is suppressed. The ‘@’ is discarded
+# before the line is passed to the shell.
+#
 .PHONY: home
 home: .git/hooks/pre-commit
 	@./scripts/ensure-channel.sh
