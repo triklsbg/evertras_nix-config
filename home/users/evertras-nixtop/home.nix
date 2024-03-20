@@ -1,7 +1,7 @@
 { lib, nerdfonts, pkgs, ... }:
 let
   themes = import ../../../shared/themes/themes.nix { inherit pkgs lib; };
-  theme = themes.mkCatppuccin { color = "Teal"; };
+  theme = themes.mkCatppuccin { color = "Sky"; };
 
   fontOverrides = {
     terminal = nerdfonts.makeMono "Mononoki";
@@ -37,7 +37,7 @@ in {
 
       spotify.enable = true;
 
-      neovim.enableCopilot = true;
+      neovim = { enableCopilot = true; };
 
       coding.rust.enable = true;
     };
